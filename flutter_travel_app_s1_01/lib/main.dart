@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,6 +25,7 @@ class _TravelHomePageState extends State<TravelHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(
         children: [
@@ -38,8 +41,10 @@ class _TravelHomePageState extends State<TravelHomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
+                          flex: 2,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -53,13 +58,31 @@ class _TravelHomePageState extends State<TravelHomePage> {
                           ),
                         ),
                         Expanded(
-                          child: Placeholder(),
+                          flex: 2,
+                          child: Container(),
                         ),
                         Expanded(
-                          child: Placeholder(),
+                          flex: 3,
+                          child: Text(
+                            "Where wouid you \n like to go?",
+                            style: TextStyle(
+                                fontSize: 32,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                         Expanded(
-                          child: Placeholder(),
+                          flex: 2,
+                          child: Card(
+                              child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  icon: Icon(Icons.search),
+                                  hintText: "Search"),
+                            ),
+                          )),
                         ),
                       ],
                     ),
