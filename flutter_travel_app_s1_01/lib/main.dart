@@ -22,6 +22,18 @@ class TravelHomePage extends StatefulWidget {
 class _TravelHomePageState extends State<TravelHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Expanded(
+              flex: 6,
+              child: Container(
+                decoration: BoxDecoration(color: Colors.orange),
+              )),
+          Expanded(flex: 8, child: Placeholder()),
+        ],
+      ),
+    );
   }
 }
