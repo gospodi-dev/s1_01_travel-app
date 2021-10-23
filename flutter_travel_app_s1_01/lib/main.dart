@@ -29,7 +29,42 @@ class _TravelHomePageState extends State<TravelHomePage> {
           Expanded(
               flex: 6,
               child: Container(
-                decoration: BoxDecoration(color: Colors.orange),
+                decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(24),
+                        bottomRight: Radius.circular(24))),
+                child: SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.menu),
+                                color: Colors.white,
+                                onPressed: () {},
+                              ),
+                              CircleAvatar(),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               )),
           Expanded(flex: 8, child: Placeholder()),
         ],
