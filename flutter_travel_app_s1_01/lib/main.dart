@@ -21,7 +21,16 @@ class TravelHomePage extends StatefulWidget {
   _TravelHomePageState createState() => _TravelHomePageState();
 }
 
-class _TravelHomePageState extends State<TravelHomePage> {
+class _TravelHomePageState extends State<TravelHomePage>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: 4);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +41,7 @@ class _TravelHomePageState extends State<TravelHomePage> {
           Expanded(
               flex: 6,
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.orange,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(24),
@@ -61,7 +70,7 @@ class _TravelHomePageState extends State<TravelHomePage> {
                           flex: 2,
                           child: Container(),
                         ),
-                        Expanded(
+                        const Expanded(
                           flex: 3,
                           child: Text(
                             "Where wouid you \n like to go?",
@@ -71,25 +80,52 @@ class _TravelHomePageState extends State<TravelHomePage> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Expanded(
+                        const Expanded(
                           flex: 2,
                           child: Card(
+                              elevation: 4,
                               child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  icon: Icon(Icons.search),
-                                  hintText: "Search"),
-                            ),
-                          )),
+                                padding: EdgeInsets.all(8.0),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      icon: Icon(Icons.search),
+                                      hintText: "Search"),
+                                ),
+                              )),
                         ),
                       ],
                     ),
                   ),
                 ),
               )),
-          Expanded(flex: 8, child: Placeholder()),
+          Expanded(
+              flex: 8,
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: TabBar(
+                      tabs: [
+                        Tab(
+                          text: "Polular",
+                        ),
+                        Tab(
+                          text: "Recommennded",
+                        ),
+                        Tab(
+                          text: "Cost-efficiency",
+                        ),
+                        Tab(
+                          text: "Efficiency",
+                        ),
+                      ],
+                      controller: _tabController,
+                    ),
+                  ),
+                  Expanded(flex: 10, child: Placeholder())
+                ],
+              )),
         ],
       ),
     );
