@@ -142,6 +142,7 @@ class _TravelHomePageState extends State<TravelHomePage>
                               itemBuilder: (context, index) {
                                 return Container(
                                   width: 260,
+                                  margin: const EdgeInsets.only(right: 12),
                                   decoration: BoxDecoration(
                                     color: Colors.red,
                                     borderRadius: BorderRadius.circular(24),
@@ -150,7 +151,33 @@ class _TravelHomePageState extends State<TravelHomePage>
                                             "https://cdn.pixabay.com/photo/2015/12/08/00/30/golden-gate-bridge-1081782_960_720.jpg"),
                                         fit: BoxFit.cover),
                                   ),
-                                  margin: EdgeInsets.only(right: 12),
+                                  padding: const EdgeInsets.all(16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Spacer(),
+                                          CircleAvatar(
+                                            backgroundColor: Colors.orange,
+                                            child: Icon(
+                                              Icons.favorite,
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Golden Gate\nBridge",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 28),
+                                      )
+                                    ],
+                                  ),
                                 );
                               }),
                         ),
