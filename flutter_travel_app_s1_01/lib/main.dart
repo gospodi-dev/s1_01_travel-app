@@ -132,7 +132,35 @@ class _TravelHomePageState extends State<TravelHomePage>
                       controller: _tabController,
                     ),
                   ),
-                  Expanded(flex: 10, child: Placeholder())
+                  Expanded(
+                    flex: 12,
+                    child: TabBarView(
+                      controller: _tabController,
+                      children: [
+                        ListView.builder(itemBuilder: (context, index) {
+                          return Container(
+                            color: Colors.red,
+                            width: 200,
+                            margin: EdgeInsets.only(left: 12),
+                          );
+                        }),
+                        ListView.builder(itemBuilder: (context, index) {
+                          return Container(
+                            color: Colors.red,
+                            width: 200,
+                            margin: EdgeInsets.only(left: 12),
+                          );
+                        }),
+                        ListView.builder(itemBuilder: (context, index) {
+                          return Container(
+                            color: Colors.red,
+                            width: 200,
+                            margin: EdgeInsets.only(left: 12),
+                          );
+                        }),
+                      ],
+                    ),
+                  )
                 ],
               )),
         ],
