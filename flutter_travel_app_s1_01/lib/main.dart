@@ -28,7 +28,7 @@ class _TravelHomePageState extends State<TravelHomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 4);
+    _tabController = TabController(vsync: this, length: 3);
   }
 
   @override
@@ -125,9 +125,6 @@ class _TravelHomePageState extends State<TravelHomePage>
                         Tab(
                           text: "Cost-efficiency",
                         ),
-                        Tab(
-                          text: "Efficiency",
-                        ),
                       ],
                       controller: _tabController,
                     ),
@@ -137,27 +134,35 @@ class _TravelHomePageState extends State<TravelHomePage>
                     child: TabBarView(
                       controller: _tabController,
                       children: [
-                        ListView.builder(itemBuilder: (context, index) {
-                          return Container(
-                            color: Colors.red,
-                            width: 200,
-                            margin: EdgeInsets.only(left: 12),
-                          );
-                        }),
-                        ListView.builder(itemBuilder: (context, index) {
-                          return Container(
-                            color: Colors.red,
-                            width: 200,
-                            margin: EdgeInsets.only(left: 12),
-                          );
-                        }),
-                        ListView.builder(itemBuilder: (context, index) {
-                          return Container(
-                            color: Colors.red,
-                            width: 200,
-                            margin: EdgeInsets.only(left: 12),
-                          );
-                        }),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 16, top: 8, bottom: 8),
+                          child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  color: Colors.red,
+                                  width: 240,
+                                  margin: EdgeInsets.only(left: 12),
+                                );
+                              }),
+                        ),
+                        ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              return Container(
+                                color: Colors.red,
+                                width: 200,
+                              );
+                            }),
+                        ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              return Container(
+                                color: Colors.red,
+                                width: 200,
+                              );
+                            }),
                       ],
                     ),
                   )
