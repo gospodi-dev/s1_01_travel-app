@@ -147,9 +147,12 @@ class _TravelHomePageState extends State<TravelHomePage>
                                     color: Colors.red,
                                     borderRadius: BorderRadius.circular(24),
                                     image: const DecorationImage(
-                                        image: NetworkImage(
-                                            "https://cdn.pixabay.com/photo/2015/12/08/00/30/golden-gate-bridge-1081782_960_720.jpg"),
-                                        fit: BoxFit.cover),
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2015/12/08/00/30/golden-gate-bridge-1081782_960_720.jpg"),
+                                      fit: BoxFit.cover,
+                                      /*colorFilter: ColorFilter.mode(
+                                            Colors.black, BlendMode.darken)*/
+                                    ),
                                   ),
                                   padding: const EdgeInsets.all(16),
                                   child: Column(
@@ -192,6 +195,64 @@ class _TravelHomePageState extends State<TravelHomePage>
                                                 fontSize: 13),
                                           )
                                         ],
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 7),
+                                        child: Container(
+                                          height: 38,
+                                          child: Row(
+                                            children: [
+                                              Expanded(
+                                                flex: 2,
+                                                child: Stack(
+                                                  children: [
+                                                    Positioned(
+                                                      left: 0,
+                                                      top: 0,
+                                                      bottom: 0,
+                                                      child: CircleAvatar(
+                                                        radius: 16,
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                      left: 16,
+                                                      top: 0,
+                                                      bottom: 0,
+                                                      child: CircleAvatar(
+                                                        radius: 16,
+                                                        backgroundColor:
+                                                            Colors.red,
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                      left: 32,
+                                                      top: 0,
+                                                      bottom: 0,
+                                                      child: CircleAvatar(
+                                                        radius: 16,
+                                                        backgroundColor:
+                                                            Colors.green,
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                              Expanded(
+                                                child: Container(),
+                                              ),
+                                              Expanded(
+                                                flex: 2,
+                                                child: Text(
+                                                  "US \$149.89",
+                                                  style: TextStyle(
+                                                      color: Colors.orange,
+                                                      fontSize: 16),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                       )
                                     ],
                                   ),
