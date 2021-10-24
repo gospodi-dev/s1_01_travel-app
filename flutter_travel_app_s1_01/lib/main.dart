@@ -73,7 +73,7 @@ class _TravelHomePageState extends State<TravelHomePage>
                         const Expanded(
                           flex: 3,
                           child: Text(
-                            "Where wouid you \n like to go?",
+                            "Where would you \n like to go?",
                             style: TextStyle(
                                 fontSize: 32,
                                 color: Colors.white,
@@ -141,9 +141,16 @@ class _TravelHomePageState extends State<TravelHomePage>
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
                                 return Container(
-                                  color: Colors.red,
-                                  width: 240,
-                                  margin: EdgeInsets.only(left: 12),
+                                  width: 260,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(24),
+                                    image: const DecorationImage(
+                                        image: NetworkImage(
+                                            "https://cdn.pixabay.com/photo/2015/12/08/00/30/golden-gate-bridge-1081782_960_720.jpg"),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  margin: EdgeInsets.only(right: 12),
                                 );
                               }),
                         ),
