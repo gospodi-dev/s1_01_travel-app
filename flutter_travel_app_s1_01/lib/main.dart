@@ -106,6 +106,15 @@ class _TravelHomePageState extends State<TravelHomePage>
                   Expanded(
                     flex: 2,
                     child: TabBar(
+                      labelColor: Colors.black,
+                      labelStyle: const TextStyle(
+                        fontSize: 18,
+                      ),
+                      unselectedLabelColor: Colors.grey,
+                      isScrollable: true,
+                      indicatorColor: Colors.deepOrangeAccent,
+                      indicatorSize: TabBarIndicatorSize.label,
+                      indicatorWeight: 3,
                       tabs: [
                         Tab(
                           text: "Polular",
