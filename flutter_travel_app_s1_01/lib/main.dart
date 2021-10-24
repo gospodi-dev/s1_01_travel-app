@@ -175,6 +175,23 @@ class _TravelHomePageState extends State<TravelHomePage>
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 28),
+                                      ),
+                                      Row(
+                                        children: [
+                                          ...List<Widget>.generate(
+                                              5,
+                                              (index) => Icon(
+                                                    Icons.star,
+                                                    color: Colors.orange,
+                                                    size: 18,
+                                                  )).toList(),
+                                          Text(
+                                            "(32)",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 13),
+                                          )
+                                        ],
                                       )
                                     ],
                                   ),
