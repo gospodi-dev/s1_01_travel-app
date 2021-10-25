@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -206,13 +208,14 @@ class _TravelHomePageState extends State<TravelHomePage>
                                               Expanded(
                                                 flex: 2,
                                                 child: Stack(
+                                                  // ignore: prefer_const_literals_to_create_immutables
                                                   children: [
                                                     Positioned(
                                                       left: 0,
                                                       top: 0,
                                                       bottom: 0,
                                                       child: CircleAvatar(
-                                                        radius: 16,
+                                                        radius: 20,
                                                       ),
                                                     ),
                                                     Positioned(
