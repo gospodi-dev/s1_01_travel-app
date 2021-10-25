@@ -215,7 +215,7 @@ class _TravelHomePageState extends State<TravelHomePage>
                                                       top: 0,
                                                       bottom: 0,
                                                       child: CircleAvatar(
-                                                        radius: 20,
+                                                        radius: 16,
                                                       ),
                                                     ),
                                                     Positioned(
