@@ -117,7 +117,7 @@ class _TravelHomePageState extends State<TravelHomePage>
                       indicatorColor: Colors.deepOrangeAccent,
                       indicatorSize: TabBarIndicatorSize.label,
                       indicatorWeight: 3,
-                      tabs: [
+                      tabs: const [
                         Tab(
                           text: "Polular",
                         ),
@@ -162,7 +162,7 @@ class _TravelHomePageState extends State<TravelHomePage>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Row(
-                                        children: [
+                                        children: const [
                                           Spacer(),
                                           CircleAvatar(
                                             backgroundColor: Colors.orange,
